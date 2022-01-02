@@ -1,3 +1,96 @@
-body {
-    font-size: 14px;
+/* Declaring global variables for the colors */
+:root {
+  --pale-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+  --pink: hsl(322, 100%, 66%);
 }
+
+/* Some base styling to make it easier to work with sizes on the project*/
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+/* Base styling that applies for the whole page*/
+
+  body {
+   margin: 0;
+   font-size: 18px;
+   font-family: 'Open Sans', sans-serif;
+   color: var(--dark-cyan);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--dark-cyan);
+  }
+  
+/* Header */
+
+header {
+  background-image: url("images/bg-hero-desktop.svg");
+  background-color: var(--pale-cyan);
+}
+
+.main-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 80px 0px 80px;
+  padding: 50px 0px 50px 0px;
+}
+
+.button-white {
+  font-weight: 700;
+  font-size: 0.8em;
+  background-color: white;
+  padding: 15px 65px 15px 65px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px lightgrey;
+  color: var(--dark-cyan);
+}
+
+.button-link {
+  text-decoration: none;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 100px;
+  margin: 0px 80px 0px 80px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.main-image img {
+  max-width: 100%;
+}
+
+.description {
+  max-width: 36%;
+  font-weight: 400;
+  padding-top: 100px;
+}
+
+.button {
+  color: white;
+  text-align: center;
+  background-color: var(--pink);
+  border-radius: 50px;
+  width: 50%;
+  padding: 20px;
+  font-size: 0.8em;
+  margin-top: 30px;
+  }
+
+ 
