@@ -93,4 +93,68 @@ header {
   margin-top: 30px;
   }
 
- 
+  /* Feature card */
+  main {
+    padding-top: 120px;
+  }
+
+  .feature, .feature-reverse { /*Main feature card-component*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    margin: 0px 80px 50px 80px;
+    padding: 50px 40px 50px 100px;
+
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px lightgrey;
+  }
+
+  .feature-reverse {
+    flex-direction: row-reverse;
+  }
+
+ .feature-text {
+   padding-right: 20%;
+ }
+
+ .feature-reverse .feature-text { /* Different layout for the reverse card*/
+   padding-right: 0%;
+   padding-left: 7%;
+ }
+
+ .feature-text p {
+   font-weight: 400;
+   color: var(--grayish-blue);
+ }
+
+ .feature-image img {
+   max-width: 100%;
+ }
+
+ .feature-reverse .feature-image img { /* Different layout for the reverse card*/
+   max-width: 72%;
+ }
+
+ /* CTA */
+ .CTA {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  margin-top: 120px;
+  border: 1px solid black;
+  
+  display: flex;
+  flex-direction: column;
+  
+  text-align: center;
+ }
+
+ .CTA .cta-title {
+  font-size: 1.6em;
+ }
+
+ .CTA .button {
+   margin: auto;
+   width: 50%;
+ }
