@@ -40,6 +40,8 @@ header {
   background-color: var(--pale-cyan);
 }
 
+/* -- Menu bar */
+
 .main-bar {
   display: flex;
   flex-direction: row;
@@ -61,6 +63,8 @@ header {
 .button-link {
   text-decoration: none;
 }
+
+/* -- End menu bar */
 
 .header-content {
   display: flex;
@@ -118,7 +122,7 @@ header {
    padding-right: 20%;
  }
 
- .feature-reverse .feature-text { /* Different layout for the reverse card*/
+ .feature-reverse .feature-text { /* Different layout for the reverse card */
    padding-right: 0%;
    padding-left: 7%;
  }
@@ -132,7 +136,7 @@ header {
    max-width: 100%;
  }
 
- .feature-reverse .feature-image img { /* Different layout for the reverse card*/
+ .feature-reverse .feature-image img { /* Different layout for the reverse card */
    max-width: 72%;
  }
 
@@ -140,14 +144,19 @@ header {
  .CTA {
   position: relative;
   margin: auto;
-  width: 60%;
   margin-top: 120px;
-  border: 1px solid black;
+  padding: 20px 0px 40px 0px;
+  width: 60%;
+  text-align: center;
+  width: 60%;
+  
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px lightgrey;
   
   display: flex;
   flex-direction: column;
-  
-  text-align: center;
+
+  background-color: white;
  }
 
  .CTA .cta-title {
@@ -155,6 +164,108 @@ header {
  }
 
  .CTA .button {
-   margin: auto;
-   width: 50%;
+  box-shadow: 0px 0px 10px lightgrey;
+  margin: auto;
+  padding: 5px 25px 5px 25px;
+  width: 50%;
  }
+
+ .CTA .button h4, a {
+   color: white;
+   font-size: 1.4em;
+   text-decoration: none;
+ }
+
+ /* Footer */
+
+ footer {
+   background-color: var(--dark-cyan);
+   
+   margin-top: -80px;
+   padding: 160px 80px 60px 80px;
+
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 100px;
+ }
+
+ footer body, p, a, i {
+   color: var(--pale-cyan);
+   font-size: 0.8em;
+ }
+
+ /* -- Footer 1st column */
+
+ .location, .phone-number, .email { /* 3 icons + text in the 1st column */
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   align-items: flex-start;
+
+   padding: 10px 0px 10px 0px;
+ }
+
+ .location a {
+   display: block;
+   padding-left: 5px;
+ }
+
+ .footer-logo {
+   padding-bottom: 20px;
+ }
+
+ /* -- Footer 2nd column */
+
+ .sitemap {
+   padding-top: 70px;
+ }
+
+ .sitemap nav a {
+    font-size: 1em;
+    float: left;
+    padding: 5px 0; 
+    width: 50%;
+ }
+
+ /* -- Footer 3rd column */
+
+ .footer-3rd-column {
+    font-size: 0.75em;
+    
+    padding-top: 70px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   
+ }
+
+ .social-media i {
+   border: 1px solid white;
+   border-radius: 100px;
+   
+   padding: 8px;
+   margin-right: 10px;
+   
+   font-size: 1em;
+ }
+
+ .social-media :first-child {
+   padding: 8px 10px 8px 10px;
+ }
+
+ .copyright {
+   margin-top: 160px;
+ }
+
+ /* Attribution */
+.attribution, .attribution a {
+  color: var(--dark-cyan);
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: underline;
+}
+ 
