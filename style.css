@@ -58,10 +58,30 @@ header {
   border-radius: 50px;
   box-shadow: 0px 0px 10px lightgrey;
   color: var(--dark-cyan);
+  position: relative;
+  z-index: 0;
 }
 
 .button-link {
   text-decoration: none;
+}
+
+/* Button overlay menu */
+
+.button-overlay {
+  background-color: white;
+  padding: 22px 65px 22px 65px;
+  margin-top: -43px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+@media (min-width: 1000px) {
+.button-overlay:hover {
+  opacity: 0.5;
+}
 }
 
 /* -- End menu bar */
@@ -96,6 +116,25 @@ header {
   font-size: 0.8em;
   margin-top: 30px;
   }
+
+  /* Button overlay header */
+
+.button-overlay-header {
+  background-color: white;
+  padding: 30px 20px 30px 20px;
+  width: 50%;
+  margin-top: -57px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+@media (min-width: 1000px) {
+.button-overlay-header:hover {
+  opacity: 0.5;
+}
+}
 
   /* Feature card */
   main {
@@ -176,6 +215,26 @@ header {
    text-decoration: none;
  }
 
+   /* Button overlay CTA */
+
+.button-overlay-cta {
+  background-color: white;
+  padding: 40px 290px 40px 290px;
+  width: 50%;
+  margin: auto;
+  margin-top: -78px;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+}
+
+@media (min-width: 1000px) {
+.button-overlay-cta:hover {
+  opacity: 0.5;
+}
+}
+
  /* Footer */
 
  footer {
@@ -227,6 +286,10 @@ header {
     width: 50%;
  }
 
+ .sitemap nav a:hover {
+   text-decoration: underline;
+ }
+
  /* -- Footer 3rd column */
 
  .footer-3rd-column {
@@ -250,8 +313,17 @@ header {
    font-size: 1em;
  }
 
- .social-media :first-child {
+ .social-media i:hover {
+  border: 1px solid var(--pink);
+  color: var(--pink);
+ }
+
+ #facebook {
    padding: 8px 10px 8px 10px;
+ }
+
+ #instagram {
+  padding: 8px 9px 8px 9px;
  }
 
  .copyright {
