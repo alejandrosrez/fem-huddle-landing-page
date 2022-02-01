@@ -25,6 +25,7 @@ html {
    font-size: 18px;
    font-family: 'Open Sans', sans-serif;
    color: var(--dark-cyan);
+   overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -32,7 +33,11 @@ html {
     font-weight: 600;
     color: var(--dark-cyan);
   }
-  
+
+  a {
+    text-decoration: none;
+  }
+
 /* Header */
 
 header {
@@ -46,13 +51,13 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 0px 80px 0px 80px;
   padding: 50px 0px 50px 0px;
 }
 
 .button-white {
   font-weight: 700;
-  font-size: 0.8em;
   background-color: white;
   padding: 15px 65px 15px 65px;
   border-radius: 50px;
@@ -64,6 +69,19 @@ header {
 
 .button-link {
   text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .main-bar {
+    margin: 0px 20px 0px 20px;
+  }
+  .button-white {
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+  }
+  .logo img {
+    max-width: 50%;
+  }
 }
 
 /* Button overlay menu */
@@ -96,6 +114,14 @@ header {
   padding-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 60px;
+    margin: 0px 40px 0px 40px;
+  }
+}
+
 .main-image img {
   max-width: 100%;
 }
@@ -106,6 +132,17 @@ header {
   padding-top: 100px;
 }
 
+@media (max-width: 768px) {
+  .description {
+    max-width: 100%;
+    margin: auto; 
+
+    padding-top: 0px;
+    
+    text-align: center;
+  }
+}
+
 .button {
   color: white;
   text-align: center;
@@ -113,8 +150,17 @@ header {
   border-radius: 50px;
   width: 50%;
   padding: 20px;
-  font-size: 0.8em;
   margin-top: 30px;
+  font-size: 0.8em;
+  }
+
+  @media (max-width: 768px) {
+    .button {
+    width: 80%;
+    margin: auto;
+    font-size: 1em;
+    font-weight: 700;
+    }
   }
 
   /* Button overlay header */
@@ -123,7 +169,7 @@ header {
   background-color: white;
   padding: 30px 20px 30px 20px;
   width: 50%;
-  margin-top: -57px;
+  margin-top: -60px;
   border-radius: 50px;
   position: relative;
   z-index: 1;
@@ -157,6 +203,17 @@ header {
     flex-direction: row-reverse;
   }
 
+  @media (max-width: 768px) {
+    .feature, .feature-reverse {
+      flex-direction: column-reverse;
+
+      margin: 0px 40px 25px 40px;
+      padding: 50px 50px 50px 50px;
+
+      text-align: center;
+    }
+  }
+
  .feature-text {
    padding-right: 20%;
  }
@@ -176,7 +233,18 @@ header {
  }
 
  .feature-reverse .feature-image img { /* Different layout for the reverse card */
-   max-width: 72%;
+   max-width: 80%;
+ }
+
+ @media (max-width: 768px) {
+   .feature-text {
+     padding: 0px;
+   }
+
+   .feature-text p {
+     font-size: 0.8em;
+     line-height: 1.5em;
+   }
  }
 
  /* CTA */
@@ -209,7 +277,7 @@ header {
   width: 50%;
  }
 
- .CTA .button h4, a {
+ .CTA .button h4, .CTA .button a {
    color: white;
    font-size: 1.4em;
    text-decoration: none;
@@ -219,10 +287,10 @@ header {
 
 .button-overlay-cta {
   background-color: white;
-  padding: 40px 290px 40px 290px;
+  padding: 48px 290px 48px 290px;
   width: 50%;
   margin: auto;
-  margin-top: -78px;
+  margin-top: -95px;
   border-radius: 50px;
   position: relative;
   z-index: 1;
@@ -233,6 +301,26 @@ header {
 .button-overlay-cta:hover {
   opacity: 0.5;
 }
+}
+
+@media (max-width: 768px) {
+  .CTA .button h4, .CTA .button a {
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+
+  .CTA {
+    width: 90%;
+  }
+
+  .CTA .cta-title {
+    font-size: 1.2em;
+   }
+
+   .CTA .button {
+     width: 70%;
+   }
 }
 
  /* Footer */
@@ -248,7 +336,7 @@ header {
    gap: 100px;
  }
 
- footer body, p, a, i {
+ footer body, footer p, footer a, footer i {
    color: var(--pale-cyan);
    font-size: 0.8em;
  }
@@ -329,6 +417,39 @@ header {
  .copyright {
    margin-top: 160px;
  }
+
+ @media (max-width: 768px) {
+  footer {
+   grid-template-columns: 1fr;
+   padding: 160px 40px 60px 40px;
+   gap: 80px;
+  }
+
+  footer body, footer p, footer a, footer i {
+    font-size: 1em;
+  }
+
+  .sitemap {
+    padding-top: 0px;
+  }
+
+  .footer-3rd-column {
+    padding-top: 0px;
+    text-align: center;
+  }
+
+  .copyright {
+    margin-top: 30px;
+  }
+
+  .sitemap nav a {
+    font-size: 1em;
+    float: left;
+    padding: 10px 0px 10px 0px; 
+    width: 100%;
+ }
+
+}
 
  /* Attribution */
 .attribution, .attribution a {

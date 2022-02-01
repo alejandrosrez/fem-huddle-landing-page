@@ -24,13 +24,19 @@ html {
 ```
 By applying the box-sizing property (and a "border-box" value), now the size of a box takes into account the border of it. For example, if I want a box to be a 100px wide and it has a 5px border, by using this property the box would be 90px (5px border on each side) as the sizes that I set would include the borders. 
 
+In addition, needed to apply some layers on top of buttons and use oppacity to show them only on hover. It is something that I first practiced on a previous challenge.
+
+On top of that, I focused on structuring my code in a way that makes it easier for others to understand (and for my future self).
+
 ### Continued development
 
 For future projects I would like to continue improving my skills on: 
 - Working with images and vectors in CSS, making them responsive and resizing them. 
+- CSS Grid
 
 ### Useful resources
 
 - [CSS Box Shadow](https://www.w3schools.com/css/css3_shadows_box.asp) - This W3Schools guide helped me to review CSS box shadows. 
+- [Z-index](https://developer.mozilla.org/es/docs/Web/CSS/z-index) - This MDN resources helped me to build my overlay layer for buttons.
 
 
